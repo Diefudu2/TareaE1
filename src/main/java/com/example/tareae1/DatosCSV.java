@@ -2,13 +2,15 @@ package com.example.tareae1;
 
 import java.io.BufferedReader;
 import java.io.FileReader;
-import java.io.FileNotFoundException;
 import java.io.IOException;
+import java.util.ArrayList;
 
 public class DatosCSV {
+
     public static void Datos() {
         String linea, Carnet, Nombre, Correo, Telefono, NickName, Tipo;
         double NotaPrEx,NotaPrQ,NotaPrT,NotaP1,NotaP2,NotaP3;
+
 
         try {
             BufferedReader br = new BufferedReader(new FileReader("C:\\Users\\andre\\Desktop\\java\\TareaE1\\src\\main\\java\\com\\example\\tareae1\\ejemploE.csv"));
@@ -27,12 +29,17 @@ public class DatosCSV {
                 NotaP1 = Double.parseDouble(datos[9]);
                 NotaP2 = Double.parseDouble(datos[10]);
                 NotaP3 = Double.parseDouble(datos[11]);
-                if(Tipo == "A"){
+                if (Tipo.equals("A")) {
+                    EstudianteA estA = new EstudianteA(Carnet, Nombre, Correo, Telefono, NickName, Tipo, NotaPrEx, NotaPrQ, NotaPrT, NotaP1, NotaP2, NotaP3);
+                    System.out.println(Nombre);
+                    estA.NotaProyectos();
 
                 }
-
-                System.out.println(datos[5]);
-            }
+                else {
+                    EstudianteB estB = new EstudianteB(Carnet, Nombre, Correo, Telefono, NickName, Tipo, NotaPrEx, NotaPrQ, NotaPrT, NotaP1, NotaP2, NotaP3);
+                    System.out.println(Tipo);
+                }
+                }
         } catch(IOException ex){
             System.err.println(ex.getMessage());
         }
