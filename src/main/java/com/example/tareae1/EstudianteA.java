@@ -1,8 +1,8 @@
 package com.example.tareae1;
 
-public class EstudianteA extends Estudiante{
+public class EstudianteA extends Estudiante {
     private static double notaPrProyectos;
-    private double notaFinal;
+    private static double notaFinal;
 
 
     public EstudianteA(String carnet, String nombre, String correo, String telefono, String nickName, String tipo, double notaPrEx, double notaPrQ, double notaPrT, double notaP1, double notaP2, double notaP3) {
@@ -10,10 +10,22 @@ public class EstudianteA extends Estudiante{
         this.notaFinal = notaFinal;
         this.notaPrProyectos = notaPrProyectos;
     }
-    public static void NotaProyectos(){
+
+    public static double NotaProyectos() {
         int i = 3;
-        System.out.println(notaPrProyectos=(Estudiante.getNotaP1()+getNotaP2()+getNotaP3())/i);
-        System.out.println(getNotaP1());
+        notaPrProyectos = (getNotaP1() + getNotaP2() + getNotaP3()) / i;
+        return (notaPrProyectos);
     }
-}
+
+    public static double NotaFinal() {
+        int i = 6;
+        notaFinal = (getNotaP1() + getNotaP2() + getNotaP3() + getNotaPrEx() + getNotaPrQ() + getNotaPrT()) / i;
+        return (notaFinal);
+    }
+        public static void getNp() {
+            System.out.println("la nota Proyectos es: " + notaPrProyectos+ "\n NFinal: " + notaFinal);
+
+        }
+    }
+
 

@@ -31,19 +31,21 @@ public class DatosCSV {
                 NotaP3 = Double.parseDouble(datos[11]);
                 if (Tipo.equals("A")) {
                     EstudianteA estA = new EstudianteA(Carnet, Nombre, Correo, Telefono, NickName, Tipo, NotaPrEx, NotaPrQ, NotaPrT, NotaP1, NotaP2, NotaP3);
-                    System.out.println(Nombre);
+                    //System.out.println(Nombre);
                     estA.NotaProyectos();
+                    estA.NotaFinal();
 
                 }
                 else {
                     EstudianteB estB = new EstudianteB(Carnet, Nombre, Correo, Telefono, NickName, Tipo, NotaPrEx, NotaPrQ, NotaPrT, NotaP1, NotaP2, NotaP3);
-                    System.out.println(Tipo);
+                    //System.out.println(Tipo);
+                    estB.NotaPrEQT();
+                    estB.NotaFinal();
                 }
                 }
         } catch(IOException ex){
             System.err.println(ex.getMessage());
         }
-
 
     }
 }

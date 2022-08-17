@@ -1,15 +1,15 @@
 package com.example.tareae1;
 
-public class Estudiante {
+public class Estudiante{
     private String Carnet;
     private String Nombre;
     private String Correo;
     private String Telefono;
     private String NickName;
     private String Tipo;
-    private double NotaPrEx;
-    private double NotaPrQ;
-    private double NotaPrT;
+    private static double NotaPrEx;
+    private static double NotaPrQ;
+    private static double NotaPrT;
     private static double NotaP1;
     private static double NotaP2;
     private static double NotaP3;
@@ -48,13 +48,13 @@ public class Estudiante {
     public String getTipo() {
         return Tipo;
     }
-    public double getNotaPrEx() {
+    public static double getNotaPrEx() {
         return NotaPrEx;
     }
-    public double getNotaPrQ() {
+    public static double getNotaPrQ() {
         return NotaPrQ;
     }
-    public double getNotaPrT() {
+    public static double getNotaPrT() {
         return NotaPrT;
     }
     public static double getNotaP1() {
@@ -66,5 +66,6 @@ public class Estudiante {
     public static double getNotaP3() {
         return NotaP3;
     }
+
 
 }
