@@ -1,20 +1,24 @@
 package com.example.tareae1;
 
-public class Estudiante{
+public abstract class Estudiante{
     private String Carnet;
     private String Nombre;
     private String Correo;
     private String Telefono;
     private String NickName;
     private String Tipo;
-    private static double NotaPrEx;
-    private static double NotaPrQ;
-    private static double NotaPrT;
-    private static double NotaP1;
-    private static double NotaP2;
-    private static double NotaP3;
+    private double NotaPrEx;
+    private double NotaPrQ;
+    private double NotaPrT;
+    private double NotaP1;
+    private double NotaP2;
+    private double NotaP3;
+    private double notaPrProyectos;
+    private double notaPrEQT;
+    private double NotaFinal;
 
-    public Estudiante(String carnet, String nombre, String correo, String telefono, String nickName, String tipo, double notaPrEx, double notaPrQ, double notaPrT, double notaP1, double notaP2, double notaP3) {
+
+    public Estudiante(String carnet, String nombre, String correo, String telefono, String nickName, String tipo, double notaPrEx, double notaPrQ, double notaPrT, double notaP1, double notaP2, double notaP3, double notaPrProyectos,double notaPrEQT,double NotaFinal) {
         this.Carnet = carnet;
         this.Nombre = nombre;
         this.Correo = correo;
@@ -27,6 +31,9 @@ public class Estudiante{
         this.NotaP1 = notaP1;
         this.NotaP2 = notaP2;
         this.NotaP3 = notaP3;
+        this.notaPrProyectos = notaPrProyectos;
+        this.notaPrEQT = notaPrEQT;
+        this.NotaFinal = NotaFinal;
     }
 
 
@@ -48,24 +55,25 @@ public class Estudiante{
     public String getTipo() {
         return Tipo;
     }
-    public static double getNotaPrEx() {
+    public double getNotaPrProyectos() {return notaPrProyectos;}
+    public double getNotaPrEQT() {return notaPrEQT;}
+    public double getNotaPrEx() {
         return NotaPrEx;
     }
-    public static double getNotaPrQ() {
+    public double getNotaPrQ() {
         return NotaPrQ;
     }
-    public static double getNotaPrT() {
+    public double getNotaPrT() {
         return NotaPrT;
     }
-    public static double getNotaP1() {
+    public double getNotaP1() {
         return NotaP1;
     }
-    public static double getNotaP2() {
+    public double getNotaP2() {
         return NotaP2;
     }
-    public static double getNotaP3() {
+    public double getNotaP3() {
         return NotaP3;
     }
-
-
+    public double getNotaFinal() {return NotaFinal;}
 }
