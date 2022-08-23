@@ -13,79 +13,78 @@ import java.net.URL;
 import java.util.ResourceBundle;
 
 public class HelloController implements Initializable{
-    @FXML
-    private VBox tabla;
-    @FXML
-    private TableView<Estudiante> table;
+
+    public VBox table;
 
     @FXML
-    private TableColumn<Estudiante,String> Carnet;
+    private TableColumn<Estudiante,String> columnCarnet;
 
     @FXML
-    private TableColumn<Estudiante,String> Nombre;
+    private TableColumn<Estudiante,String> columnNombre;
 
     @FXML
-    private TableColumn<Estudiante,String> Correo;
+    private TableColumn<Estudiante,String> columnCorreo;
 
     @FXML
-    private TableColumn<Estudiante,String> Telefono;
+    private TableColumn<Estudiante,String> columnTelefono;
 
     @FXML
-    private TableColumn<Estudiante,String> NickName;
+    private TableColumn<Estudiante,String> columnNickName;
 
     @FXML
-    private TableColumn<Estudiante,String> Tipo;
+    private TableColumn<Estudiante,String> columnTipo;
 
     @FXML
-    private TableColumn<Estudiante, Double> NotaPrEx;
+    private TableColumn<Estudiante, Double> columnNotaPrEx;
 
     @FXML
-    private TableColumn<Estudiante, Double> NotaPrQ;
+    private TableColumn<Estudiante, Double> columnNotaPrQ;
 
     @FXML
-    private TableColumn<Estudiante, Double> NotaPrT;
+    private TableColumn<Estudiante, Double> columnNotaPrT;
 
     @FXML
-    private TableColumn<Estudiante, Double> NotaP1;
+    private TableColumn<Estudiante, Double> columnNotaP1;
 
     @FXML
-    private TableColumn<Estudiante, Double> NotaP2;
+    private TableColumn<Estudiante, Double> columnNotaP2;
 
     @FXML
-    private TableColumn<Estudiante, Double> NotaP3;
+    private TableColumn<Estudiante, Double> columnNotaP3;
 
     @FXML
-    private TableColumn<Estudiante, Double> notaPrProyectos;
+    private TableColumn<Estudiante, Double> columnnotaPrProyectos;
 
     @FXML
-    private TableColumn<Estudiante, Double> notaPrEQT;
+    private TableColumn<Estudiante, Double> columnnotaPrEQT;
 
     @FXML
-    private TableColumn<Estudiante, Double> notaFinal;
+    private TableColumn<Estudiante, Double> columnnotaFinal;
+    @FXML
+    private TableView<Estudiante> tabla;
+
     private ObservableList<Estudiante> Students;
-
-
     @Override
     public void initialize(URL url, ResourceBundle resourceBundle) {
         Students = FXCollections.observableArrayList(DatosCSV.getEstudiantes());
 
-        Carnet.setCellValueFactory(new PropertyValueFactory<Estudiante,String>("Carnet"));
-        Nombre.setCellValueFactory(new PropertyValueFactory<Estudiante,String>("Nombre"));
-        Correo.setCellValueFactory(new PropertyValueFactory<Estudiante,String>("Correo"));
-        Telefono.setCellValueFactory(new PropertyValueFactory<Estudiante,String>("Telefono"));
-        NickName.setCellValueFactory(new PropertyValueFactory<Estudiante,String>("NickName"));
-        Tipo.setCellValueFactory(new PropertyValueFactory<Estudiante,String>("Tipo"));
-        NotaPrEx.setCellValueFactory(new PropertyValueFactory<Estudiante,Double>("NotaPrEx"));
-        NotaPrQ.setCellValueFactory(new PropertyValueFactory<Estudiante,Double>("NotaPrQ"));
-        NotaPrT.setCellValueFactory(new PropertyValueFactory<Estudiante,Double>("NotaPrT"));
-        NotaP1.setCellValueFactory(new PropertyValueFactory<Estudiante,Double>("NotaP1"));
-        NotaP2.setCellValueFactory(new PropertyValueFactory<Estudiante,Double>("NotaP2"));
-        NotaP3.setCellValueFactory(new PropertyValueFactory<Estudiante,Double>("NotaP3"));
-        notaPrProyectos.setCellValueFactory(new PropertyValueFactory<Estudiante,Double>("notaPrProyectos"));
-        notaPrEQT.setCellValueFactory(new PropertyValueFactory<Estudiante,Double>("notaPrEQT"));
-        notaFinal.setCellValueFactory(new PropertyValueFactory<Estudiante,Double>("notaFinal"));
+        columnCarnet.setCellValueFactory(new PropertyValueFactory<Estudiante, String>("Carnet"));
+        columnNombre.setCellValueFactory(new PropertyValueFactory<Estudiante,String>("Nombre"));
+        columnCorreo.setCellValueFactory(new PropertyValueFactory<Estudiante,String>("Correo"));
+        columnTelefono.setCellValueFactory(new PropertyValueFactory<Estudiante,String>("Telefono"));
+        columnNickName.setCellValueFactory(new PropertyValueFactory<Estudiante,String>("NickName"));
+        columnTipo.setCellValueFactory(new PropertyValueFactory<Estudiante,String>("Tipo"));
+        columnNotaPrEx.setCellValueFactory(new PropertyValueFactory<Estudiante,Double>("NotaPrEx"));
+        columnNotaPrQ.setCellValueFactory(new PropertyValueFactory<Estudiante,Double>("NotaPrQ"));
+        columnNotaPrT.setCellValueFactory(new PropertyValueFactory<Estudiante,Double>("NotaPrT"));
+        columnNotaP1.setCellValueFactory(new PropertyValueFactory<Estudiante,Double>("NotaP1"));
+        columnNotaP2.setCellValueFactory(new PropertyValueFactory<Estudiante,Double>("NotaP2"));
+        columnNotaP3.setCellValueFactory(new PropertyValueFactory<Estudiante,Double>("NotaP3"));
+        columnnotaPrProyectos.setCellValueFactory(new PropertyValueFactory<Estudiante,Double>("notaPrProyectos"));
+        columnnotaPrEQT.setCellValueFactory(new PropertyValueFactory<Estudiante,Double>("notaPrEQT"));
+        columnnotaFinal.setCellValueFactory(new PropertyValueFactory<Estudiante,Double>("notaFinal"));
+        tabla.getItems().setAll(Students);
 
-        table.getItems().setAll(Students);
     }
 
 }

@@ -13,24 +13,24 @@ public abstract class Estudiante{
     private final double NotaP1;
     private final double NotaP2;
     private final double NotaP3;
-    private final double notaPrProyectos;
-    private final double notaPrEQT;
-    private final double NotaFinal;
+    private double notaPrProyectos;
+    private double notaPrEQT;
+    private double NotaFinal;
 
 
-    public Estudiante(String carnet, String nombre, String correo, String telefono, String nickName, String tipo, double notaPrEx, double notaPrQ, double notaPrT, double notaP1, double notaP2, double notaP3, double notaPrProyectos,double notaPrEQT,double NotaFinal) {
-        this.Carnet = carnet;
-        this.Nombre = nombre;
-        this.Correo = correo;
-        this.Telefono = telefono;
-        this.NickName = nickName;
-        this.Tipo = tipo;
-        this.NotaPrEx = notaPrEx;
-        this.NotaPrQ = notaPrQ;
-        this.NotaPrT = notaPrT;
-        this.NotaP1 = notaP1;
-        this.NotaP2 = notaP2;
-        this.NotaP3 = notaP3;
+    public Estudiante(String Carnet, String Nombre, String Correo, String Telefono, String NickName, String Tipo, double NotaPrEx, double NotaPrQ, double NotaPrT, double NotaP1, double NotaP2, double NotaP3, double notaPrProyectos,double notaPrEQT,double NotaFinal) {
+        this.Carnet = Carnet;
+        this.Nombre = Nombre;
+        this.Correo = Correo;
+        this.Telefono = Telefono;
+        this.NickName = NickName;
+        this.Tipo = Tipo;
+        this.NotaPrEx = NotaPrEx;
+        this.NotaPrQ =NotaPrQ;
+        this.NotaPrT = NotaPrT;
+        this.NotaP1 = NotaP1;
+        this.NotaP2 = NotaP2;
+        this.NotaP3 = NotaP3;
         this.notaPrProyectos = notaPrProyectos;
         this.notaPrEQT = notaPrEQT;
         this.NotaFinal = NotaFinal;
@@ -81,5 +81,15 @@ public abstract class Estudiante{
     }
     public double getNotaFinal() {
         return NotaFinal;
+    }
+
+    public void setnotaPrProyectos(double NotaPrProyectos) {
+        notaPrProyectos = NotaPrProyectos;
+    }
+    public void setnotaPrEQT(double NotaPrEQT) {
+        notaPrEQT = NotaPrEQT;
+}
+    public void setNotaFinal() {
+        NotaFinal = ((NotaP1+NotaP2+NotaP3+NotaPrQ+NotaPrEx+NotaPrT)/6);
     }
 }

@@ -5,29 +5,33 @@
 <?import javafx.scene.control.TableColumn?>
 <?import javafx.scene.control.TableView?>
 <?import javafx.scene.layout.VBox?>
+<?import javafx.scene.text.Font?>
 
-<VBox id="tabla" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="179.0" prefWidth="600.0" xmlns="http://javafx.com/javafx/18" xmlns:fx="http://javafx.com/fxml/1">
+<VBox fx:id="table" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="260.0" prefWidth="600.0" xmlns="http://javafx.com/javafx/18" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.example.tareae1.HelloController">
     <children>
-        <Label prefHeight="17.0" prefWidth="599.0" text="Estudiantes:" />
-        <ScrollPane prefHeight="162.0" prefWidth="600.0">
+        <Label alignment="CENTER" contentDisplay="CENTER" prefHeight="56.0" prefWidth="596.0" text="Lista de estudiantes:" textAlignment="CENTER" textFill="#2334a1">
+         <font>
+            <Font name="Arial Black" size="16.0" />
+         </font></Label>
+        <ScrollPane prefHeight="205.0" prefWidth="600.0">
             <content>
-                <TableView prefHeight="163.0" prefWidth="600.0">
+                <TableView fx:id="tabla" prefHeight="262.0" prefWidth="1405.0">
                     <columns>
-                        <TableColumn id="Carnet" prefWidth="75.0" text="Carnet" />
-                        <TableColumn id="Nombre" prefWidth="126.0" text="Nombre y Apellidos" />
-                        <TableColumn id="Correo" prefWidth="62.0" text="Correo" />
-                        <TableColumn id="Telefono" prefWidth="71.0" text="Telefono" />
-                        <TableColumn id="NickName" prefWidth="77.0" text="Nickname" />
-                        <TableColumn id="Tipo" prefWidth="39.0" text="Tipo" />
-                        <TableColumn id="NotaPrEx" prefWidth="108.0" text="Promedio(Examenes)" />
-                        <TableColumn id="NotaPrQ" prefWidth="99.0" text="Promedio(Quices)" />
-                        <TableColumn id="NotaPrT" prefWidth="93.0" text="Promedio(Tareas)" />
-                        <TableColumn id="NotaP1" minWidth="0.0" prefWidth="104.0" text="Nota Proyecto #1" />
-                        <TableColumn id="NotaP2" minWidth="0.0" prefWidth="111.0" text="Nota Proyecto #2" />
-                        <TableColumn id="NotaP3" minWidth="0.0" prefWidth="125.0" text="Nota Proyecto #3" />
-                        <TableColumn id="notaPrProyectos" minWidth="0.0" prefWidth="106.0" text="Promedio (Proyecto)" />
-                        <TableColumn id="notaPrEQT" minWidth="0.0" prefWidth="126.0" text="Promedio(Exam, Quiz,Tarea))" />
-                        <TableColumn id="notaFinal" minWidth="0.0" prefWidth="75.0" text="Nota Final" />
+                        <TableColumn fx:id="columnCarnet" prefWidth="75.0" text="Carnet" />
+                        <TableColumn fx:id="columnNombre" prefWidth="126.0" text="Nombre y Apellidos" />
+                        <TableColumn fx:id="columnCorreo" prefWidth="62.0" text="Correo" />
+                        <TableColumn fx:id="columnTelefono" prefWidth="71.0" text="Telefono" />
+                        <TableColumn fx:id="columnNickName" prefWidth="77.0" text="Nickname" />
+                        <TableColumn fx:id="columnTipo" prefWidth="39.0" text="Tipo" />
+                        <TableColumn fx:id="columnNotaPrEx" prefWidth="108.0" text="Promedio(Examenes)" />
+                        <TableColumn fx:id="columnNotaPrQ" prefWidth="99.0" text="Promedio(Quices)" />
+                        <TableColumn fx:id="columnNotaPrT" prefWidth="93.0" text="Promedio(Tareas)" />
+                        <TableColumn fx:id="columnNotaP1" minWidth="0.0" prefWidth="104.0" text="Nota Proyecto #1" />
+                        <TableColumn fx:id="columnNotaP2" minWidth="0.0" prefWidth="111.0" text="Nota Proyecto #2" />
+                        <TableColumn fx:id="columnNotaP3" minWidth="0.0" prefWidth="125.0" text="Nota Proyecto #3" />
+                        <TableColumn fx:id="columnnotaPrProyectos" minWidth="0.0" prefWidth="106.0" text="Promedio (Proyecto)" />
+                        <TableColumn fx:id="columnnotaPrEQT" minWidth="0.0" prefWidth="126.0" text="Promedio(Exam, Quiz,Tarea))" />
+                        <TableColumn fx:id="columnnotaFinal" minWidth="0.0" prefWidth="75.0" text="Nota Final" />
                     </columns>
                 </TableView>
             </content>

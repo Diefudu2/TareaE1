@@ -13,11 +13,9 @@ public class DatosCSV {
     }
     public DatosCSV(ArrayList<Estudiante> estudiantes) {
         if(estudiantes == null) {
-            System.out.println("a");
             this.estudiantes = new ArrayList<Estudiante>();
         }
         else {
-            System.out.println("b");
             this.estudiantes = estudiantes;
         }
     }
@@ -28,10 +26,8 @@ public class DatosCSV {
 
         try {
             BufferedReader br = new BufferedReader(new FileReader("C:\\Users\\andre\\Desktop\\java\\TareaE1\\src\\main\\java\\com\\example\\tareae1\\ejemploE.csv"));
-            //linea = "";
-            linea = br.readLine();
+            linea = "";
             while ((linea = br.readLine()) != null) {
-                System.out.println("guarda");
                 String[] datos = linea.split(",");
                 Carnet = datos[0];
                 Nombre = datos[1];
@@ -39,9 +35,7 @@ public class DatosCSV {
                 Telefono = datos[3];
                 NickName = datos[4];
                 Tipo = datos[5];
-                System.out.println("uis");
                 NotaPrEx = datos[6];
-                System.out.println("aqui");
                 NotaPrQ = datos[7];
                 NotaPrT = datos[8];
                 NotaP1 = datos[9];
@@ -52,22 +46,23 @@ public class DatosCSV {
                 NotaFinal = 0.0;
 
                 if (datos[5].equals("A")) {
-                    EstudianteA estA = new EstudianteA(Carnet, Nombre, Correo, Telefono, NickName, Tipo, Double.parseDouble(NotaPrEx), Double.parseDouble(NotaPrQ), Double.parseDouble(NotaPrT), Double.parseDouble(NotaP1), Double.parseDouble(NotaP2), Double.parseDouble(NotaP3), notaPrProyectos, notaPrEQT, NotaFinal);
-                    this.estudiantes.add(estA);
-                    //System.out.println(Nombre);
+                    EstudianteA est = new EstudianteA(Carnet, Nombre, Correo, Telefono, NickName, Tipo, Double.parseDouble(NotaPrEx), Double.parseDouble(NotaPrQ), Double.parseDouble(NotaPrT), Double.parseDouble(NotaP1), Double.parseDouble(NotaP2), Double.parseDouble(NotaP3), notaPrProyectos, notaPrEQT, NotaFinal);
+                    this.estudiantes.add(est);
+                    System.out.println(Nombre);
 
 
 
-                } else {
-                    EstudianteB estB = new EstudianteB(Carnet, Nombre, Correo, Telefono, NickName, Tipo, Double.parseDouble(NotaPrEx), Double.parseDouble(NotaPrQ), Double.parseDouble(NotaPrT), Double.parseDouble(NotaP1), Double.parseDouble(NotaP2), Double.parseDouble(NotaP3), notaPrProyectos, notaPrEQT, NotaFinal);
-                    this.estudiantes.add(estB);
-                    //System.out.println(Tipo);
+                }
+                else if (datos[5].equals("B")){
+                    EstudianteB est = new EstudianteB(Carnet, Nombre, Correo, Telefono, NickName, Tipo, Double.parseDouble(NotaPrEx), Double.parseDouble(NotaPrQ), Double.parseDouble(NotaPrT), Double.parseDouble(NotaP1), Double.parseDouble(NotaP2), Double.parseDouble(NotaP3), notaPrProyectos, notaPrEQT, NotaFinal);
+                    this.estudiantes.add(est);
+                    System.out.println(Tipo);
 
                 }
             }
-        } catch (IOException estA) {
+        } catch (IOException est) {
             System.out.println("error");
-            throw new RuntimeException(estA);
+            throw new RuntimeException(est);
             //System.err.println(estA.getMessage());
         }
 
