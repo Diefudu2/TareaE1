@@ -7,13 +7,14 @@ import javafx.fxml.Initializable;
 import javafx.scene.control.TableColumn;
 import javafx.scene.control.TableView;
 import javafx.scene.control.cell.PropertyValueFactory;
+import javafx.scene.layout.VBox;
 
 import java.net.URL;
 import java.util.ResourceBundle;
 
 public class HelloController implements Initializable{
-
-
+    @FXML
+    private VBox tabla;
     @FXML
     private TableView<Estudiante> table;
 
@@ -62,7 +63,6 @@ public class HelloController implements Initializable{
     @FXML
     private TableColumn<Estudiante, Double> notaFinal;
     private ObservableList<Estudiante> Students;
-
 
 
     @Override

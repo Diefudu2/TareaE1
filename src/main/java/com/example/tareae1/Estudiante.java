@@ -1,21 +1,21 @@
 package com.example.tareae1;
 
 public abstract class Estudiante{
-    private String Carnet;
-    private String Nombre;
-    private String Correo;
-    private String Telefono;
-    private String NickName;
-    private String Tipo;
-    private double NotaPrEx;
-    private double NotaPrQ;
-    private double NotaPrT;
-    private double NotaP1;
-    private double NotaP2;
-    private double NotaP3;
-    private double notaPrProyectos;
-    private double notaPrEQT;
-    private double NotaFinal;
+    private final String Carnet;
+    private final String Nombre;
+    private final String Correo;
+    private final String Telefono;
+    private final String NickName;
+    private final String Tipo;
+    private final double NotaPrEx;
+    private final double NotaPrQ;
+    private final double NotaPrT;
+    private final double NotaP1;
+    private final double NotaP2;
+    private final double NotaP3;
+    private final double notaPrProyectos;
+    private final double notaPrEQT;
+    private final double NotaFinal;
 
 
     public Estudiante(String carnet, String nombre, String correo, String telefono, String nickName, String tipo, double notaPrEx, double notaPrQ, double notaPrT, double notaP1, double notaP2, double notaP3, double notaPrProyectos,double notaPrEQT,double NotaFinal) {
@@ -55,8 +55,12 @@ public abstract class Estudiante{
     public String getTipo() {
         return Tipo;
     }
-    public double getNotaPrProyectos() {return notaPrProyectos;}
-    public double getNotaPrEQT() {return notaPrEQT;}
+    public double getNotaPrProyectos() {
+        return notaPrProyectos;
+    }
+    public double getNotaPrEQT() {
+        return notaPrEQT;
+    }
     public double getNotaPrEx() {
         return NotaPrEx;
     }
@@ -75,5 +79,7 @@ public abstract class Estudiante{
     public double getNotaP3() {
         return NotaP3;
     }
-    public double getNotaFinal() {return NotaFinal;}
+    public double getNotaFinal() {
+        return NotaFinal;
+    }
 }

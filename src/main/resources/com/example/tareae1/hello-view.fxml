@@ -4,40 +4,33 @@
 <?import javafx.scene.control.ScrollPane?>
 <?import javafx.scene.control.TableColumn?>
 <?import javafx.scene.control.TableView?>
-<?import javafx.scene.effect.Blend?>
 <?import javafx.scene.layout.VBox?>
-<?import javafx.scene.text.Font?>
 
-<VBox fx:id="tabla" alignment="CENTER" prefHeight="294.0" prefWidth="526.0" spacing="20.0" xmlns="http://javafx.com/javafx/18" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.example.tareae1.HelloController">
-   <Label prefHeight="36.0" prefWidth="162.0" text="Lista de estudiantes." textAlignment="CENTER" textFill="#23179e">
-      <font>
-         <Font name="Britannic Bold" size="17.0" />
-      </font>
-   </Label>
-   <ScrollPane prefHeight="200.0" prefWidth="200.0">
-      <content>
-         <TableView prefHeight="200.0" prefWidth="1724.0">
-           <columns>
-             <TableColumn fx:id="Carnet" prefWidth="75.0" text="Carnet" />
-             <TableColumn fx:id="Nombre" prefWidth="126.0" text="Nombre y Apellidos" />
-               <TableColumn fx:id="Correo" prefWidth="62.0" text="Correo" />
-               <TableColumn fx:id="Telefono" prefWidth="71.0" text="Telefono" />
-               <TableColumn fx:id="NickName" prefWidth="77.0" text="Nickname" />
-               <TableColumn fx:id="Tipo" prefWidth="39.0" text="Tipo" />
-               <TableColumn fx:id="NotaPrEx" prefWidth="108.0" text="Promedio(Examenes)" />
-               <TableColumn fx:id="NotaPrQ" prefWidth="99.0" text="Promedio(Quices)" />
-               <TableColumn fx:id="NotaPrT" prefWidth="93.0" text="Promedio(Tareas)" />
-               <TableColumn fx:id="NotaP1" minWidth="0.0" prefWidth="104.0" text="Nota Proyecto #1" />
-               <TableColumn fx:id="NotaP2" minWidth="0.0" prefWidth="111.0" text="Nota Proyecto #2" />
-               <TableColumn fx:id="NotaP3" minWidth="0.0" prefWidth="125.0" text="Nota Proyecto #3" />
-               <TableColumn fx:id="notaPrProyectos" minWidth="0.0" prefWidth="106.0" text="Promedio (Proyecto)" />
-               <TableColumn fx:id="notaPrEQT" minWidth="0.0" prefWidth="126.0" text="Promedio(Exam, Quiz,Tarea))" />
-               <TableColumn fx:id="notaFinal" minWidth="0.0" prefWidth="75.0" text="Nota Final" />
-           </columns>
-         </TableView>
-      </content>
-   </ScrollPane>
-   <effect>
-      <Blend />
-   </effect>
+<VBox id="tabla" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="179.0" prefWidth="600.0" xmlns="http://javafx.com/javafx/18" xmlns:fx="http://javafx.com/fxml/1">
+    <children>
+        <Label prefHeight="17.0" prefWidth="599.0" text="Estudiantes:" />
+        <ScrollPane prefHeight="162.0" prefWidth="600.0">
+            <content>
+                <TableView prefHeight="163.0" prefWidth="600.0">
+                    <columns>
+                        <TableColumn id="Carnet" prefWidth="75.0" text="Carnet" />
+                        <TableColumn id="Nombre" prefWidth="126.0" text="Nombre y Apellidos" />
+                        <TableColumn id="Correo" prefWidth="62.0" text="Correo" />
+                        <TableColumn id="Telefono" prefWidth="71.0" text="Telefono" />
+                        <TableColumn id="NickName" prefWidth="77.0" text="Nickname" />
+                        <TableColumn id="Tipo" prefWidth="39.0" text="Tipo" />
+                        <TableColumn id="NotaPrEx" prefWidth="108.0" text="Promedio(Examenes)" />
+                        <TableColumn id="NotaPrQ" prefWidth="99.0" text="Promedio(Quices)" />
+                        <TableColumn id="NotaPrT" prefWidth="93.0" text="Promedio(Tareas)" />
+                        <TableColumn id="NotaP1" minWidth="0.0" prefWidth="104.0" text="Nota Proyecto #1" />
+                        <TableColumn id="NotaP2" minWidth="0.0" prefWidth="111.0" text="Nota Proyecto #2" />
+                        <TableColumn id="NotaP3" minWidth="0.0" prefWidth="125.0" text="Nota Proyecto #3" />
+                        <TableColumn id="notaPrProyectos" minWidth="0.0" prefWidth="106.0" text="Promedio (Proyecto)" />
+                        <TableColumn id="notaPrEQT" minWidth="0.0" prefWidth="126.0" text="Promedio(Exam, Quiz,Tarea))" />
+                        <TableColumn id="notaFinal" minWidth="0.0" prefWidth="75.0" text="Nota Final" />
+                    </columns>
+                </TableView>
+            </content>
+        </ScrollPane>
+    </children>
 </VBox>

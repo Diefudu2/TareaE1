@@ -14,9 +14,11 @@ public class HelloApplication extends Application {
     @Override
     public void start(Stage stage) throws Exception {
         ArrayList<Estudiante> estudiantes = new ArrayList<Estudiante>();
-        DatosCSV Datos = new DatosCSV(estudiantes);
+        DatosCSV datos = new DatosCSV(estudiantes);
+        datos.Datos();
         Student = FXCollections.observableArrayList(DatosCSV.getEstudiantes());
-        Datos.Datos();
+        System.out.println(DatosCSV.getEstudiantes());
+
         FXMLLoader fxmlLoader = new FXMLLoader(HelloApplication.class.getResource("hello-view.fxml"));
         Scene scene = new Scene(fxmlLoader.load(), 620, 340);
         stage.setTitle("Que honda pa");
