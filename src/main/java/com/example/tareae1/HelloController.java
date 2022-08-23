@@ -11,8 +11,12 @@ import javafx.scene.layout.VBox;
 
 import java.net.URL;
 import java.util.ResourceBundle;
-
+/**
+ *Esta clase coloca los datos de la lista de Estudiantes en las cedas del TableView
+ *
+ */
 public class HelloController implements Initializable{
+
 
     public VBox table;
 

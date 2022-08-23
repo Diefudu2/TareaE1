@@ -1,7 +1,14 @@
 package com.example.tareae1;
-
+/**
+*Se crea la clase abstacta Estudiante
+*Aqui se referencian los atributos de dicha clase y sus hijas
+ */
 public abstract class Estudiante{
-    private final String Carnet;
+    /**
+    *El private al referenciar los atributos encapsula al dato lo cual genera que solo se pueda utilizar en esta clase
+    *a ecepcion del protected que encapsula el atributo en la clase y sus clases hijas
+     */
+    private final String Carnet;//atributos del objeto
     private final String Nombre;
     private final String Correo;
     private final String Telefono;
@@ -15,7 +22,7 @@ public abstract class Estudiante{
     private final double NotaP3;
     private double notaPrProyectos;
     private double notaPrEQT;
-    private double NotaFinal;
+    protected double NotaFinal;
 
 
     public Estudiante(String Carnet, String Nombre, String Correo, String Telefono, String NickName, String Tipo, double NotaPrEx, double NotaPrQ, double NotaPrT, double NotaP1, double NotaP2, double NotaP3, double notaPrProyectos,double notaPrEQT,double NotaFinal) {
@@ -89,7 +96,7 @@ public abstract class Estudiante{
     public void setnotaPrEQT(double NotaPrEQT) {
         notaPrEQT = NotaPrEQT;
 }
-    public void setNotaFinal() {
-        NotaFinal = ((NotaP1+NotaP2+NotaP3+NotaPrQ+NotaPrEx+NotaPrT)/6);
+    public void NotaFinal() {
+        NotaFinal= 0.1 ;
     }
 }

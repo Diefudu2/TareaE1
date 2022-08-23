@@ -5,6 +5,10 @@ import java.io.FileReader;
 import java.io.IOException;
 import java.util.ArrayList;
 
+/**
+ * se crea una clase llamada DatosCSV para obtener los datos del archivo .csv y guardarlos en una lista de objetos
+ * de la clase Estudiantes
+ */
 public class DatosCSV {
     public static ArrayList<Estudiante> estudiantes;
 
@@ -47,8 +51,7 @@ public class DatosCSV {
 
                 if (datos[5].equals("A")) {
                     EstudianteA est = new EstudianteA(Carnet, Nombre, Correo, Telefono, NickName, Tipo, Double.parseDouble(NotaPrEx), Double.parseDouble(NotaPrQ), Double.parseDouble(NotaPrT), Double.parseDouble(NotaP1), Double.parseDouble(NotaP2), Double.parseDouble(NotaP3), notaPrProyectos, notaPrEQT, NotaFinal);
-                    this.estudiantes.add(est);
-                    System.out.println(Nombre);
+                    this.estudiantes.add(est);//Aqui se instancian los objetos para las clases
 
 
 
@@ -56,14 +59,13 @@ public class DatosCSV {
                 else if (datos[5].equals("B")){
                     EstudianteB est = new EstudianteB(Carnet, Nombre, Correo, Telefono, NickName, Tipo, Double.parseDouble(NotaPrEx), Double.parseDouble(NotaPrQ), Double.parseDouble(NotaPrT), Double.parseDouble(NotaP1), Double.parseDouble(NotaP2), Double.parseDouble(NotaP3), notaPrProyectos, notaPrEQT, NotaFinal);
                     this.estudiantes.add(est);
-                    System.out.println(Tipo);
 
                 }
             }
         } catch (IOException est) {
             System.out.println("error");
             throw new RuntimeException(est);
-            //System.err.println(estA.getMessage());
+            //System.err.println(est.getMessage());
         }
 
     }

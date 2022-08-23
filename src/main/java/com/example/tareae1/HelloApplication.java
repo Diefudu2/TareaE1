@@ -1,7 +1,11 @@
 package com.example.tareae1;
-
+/**
+*
+ *
+*@author Andres Castro Moreno
+*
+ */
 import javafx.application.Application;
-import javafx.collections.FXCollections;
 import javafx.collections.ObservableList;
 import javafx.fxml.FXMLLoader;
 import javafx.scene.Scene;
@@ -13,7 +17,6 @@ public class HelloApplication extends Application {
     public ObservableList<Estudiante> Student = null;
     @Override
     public void start(Stage stage) throws Exception {
-        System.out.println(Student);
         ArrayList<Estudiante> estudiantes = new ArrayList<Estudiante>();
         DatosCSV datos = new DatosCSV(estudiantes);
         datos.Datos();
@@ -23,5 +26,8 @@ public class HelloApplication extends Application {
         stage.setTitle("Estudiantes");
         stage.setScene(scene);
         stage.show();
+    }
+    public static void main(String[] args) {
+        launch();
     }
 }
